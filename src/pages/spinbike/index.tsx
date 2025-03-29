@@ -6,6 +6,7 @@ import { Navbar, TestCard } from "../ui";
 import { FaPhoneAlt, FaShoppingCart } from "react-icons/fa";
 import { BiSmile } from "react-icons/bi";
 import { FaTruckArrowRight } from "react-icons/fa6";
+import { toast } from "react-toastify";
 // import { toast } from "react-toastify";
 
 const Spinbike = () => {
@@ -73,7 +74,12 @@ const Spinbike = () => {
 
       const form = new FormData();
       form.append("form-name", "contact");
-      Object.keys(formData).forEach((key) => form.append(key, formData[key as keyof typeof formData]))
+      Object.keys(formData).forEach((key) => form.append(key, formData[key as keyof typeof formData]));
+
+      fetch("/", {
+        method: "POST",
+        body: form
+      }).then(() => toast.success("Received, We will contact you shortly", {position: "top-center"})).catch((error) => toast.error(`Submission failed: ${error}`))
     }
   return (
 
