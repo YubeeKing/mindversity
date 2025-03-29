@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { caloriespng, defsolu, makexe, quaterbike, spinbikepng, testCard01, testCard02, testCard03, upqual } from "../../assets";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 // import axios from "axios";
 import { Navbar, TestCard } from "../ui";
 import { FaPhoneAlt, FaShoppingCart } from "react-icons/fa";
@@ -10,15 +10,18 @@ import { FaTruckArrowRight } from "react-icons/fa6";
 
 const Spinbike = () => {
 
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [city, setCity] = useState("");
-    const [address, setAddress] = useState("")
-    const [state, setState] = useState("");
-    const [phoneNo, setPhoneNo] = useState<null | any>(null);
-    const [altPhoneNo, setAltPhoneNo] = useState<null | any>(null);
-    const [message, setMessage] = useState("")
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    address: "",
+    city: "",
+    state: "",
+    phoneno: "",
+    altPhoneNo: "",
+    message: ""
+  })
+
     // const [formLoading, setFormLoading]= useState(false)
 
 
@@ -38,10 +41,7 @@ const Spinbike = () => {
     formRef.current?.scrollIntoView({
       behavior: 'smooth'
     })
-   }
-
-
-  
+   }  
 
     const TestData = [
       {
@@ -63,6 +63,18 @@ const Spinbike = () => {
         text: "This is undoubtedly an excellent product! The clear digital display provides diverse metrics to monitor progress, making it an essential part of my daily fitness routine. It keeps me active, motivated, and on track toward my fitness goals."
       }
     ]
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData({...formData, [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+
+      const form = new FormData();
+      form.append("form-name", "contact");
+      Object.keys(formData).forEach((key) => form.append(key, formData[key as keyof typeof formData]))
+    }
   return (
 
     <div>
@@ -207,50 +219,50 @@ const Spinbike = () => {
         <div className="container py-6" ref={formRef}>
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="text-center font-[700] font-['Inter'] py-4 md:text-4xl text-2xl">Contact <span className="text-primary">Us</span> </h2>
-            <form name="contact" method="POST" data-netlify="true" className="flex flex-col md:gap-2 gap-0 shadow rounded-xl md:p-8 p-4">
+            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="flex flex-col md:gap-2 gap-0 shadow rounded-xl md:p-8 p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 justify-start items-center md:pt-2 pt-0">
                <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">First Name</label>
-                <input type="text" required className="rounded border-inpcolor outline-none  border-opacity-90 border-2 p-1" value={firstName} onChange={(e:any) => setFirstName(e.target.value)} />
+                <input type="text" name="firstname"  required className="rounded border-inpcolor outline-none  border-opacity-90 border-2 p-1"  onChange={handleChange} />
               </div> 
               <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">Last Name</label>
-                <input type="text" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={lastName} onChange={(e: any) => setLastName(e.target.value)} />
+                <input type="text" name="lastname" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange} />
               </div>
               </div>
               <div className="flex flex-col md:gap-1 gap-0 md:pt-2 pt-0">
                 <label className="font-[500]">Email</label>
-                <input type="email" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={email} onChange={(e:any) => setEmail(e.target.value)} />
+                <input type="email" name="email" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange} />
               </div>
               <div>
               <div className="flex flex-col md:gap-1 gap-0 md:pt-2 pt-0">
                     <label className="font-[500]">Address</label>
-                    <input type="text" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={address} onChange={(e:any) => setAddress(e.target.value)} />
+                    <input type="text" name="email" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange} />
                   </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-start items-center md:pt-2 pt-0">
                   <div className="flex flex-col md:gap-1 gap-0">
                     <label className="font-[500]">City</label>
-                    <input type="text" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={city} onChange={(e:any) => setCity(e.target.value)} />
+                    <input type="text" name="city" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange} />
                   </div>
                   <div className="flex flex-col md:gap-1 gap-0">
                     <label className="font-[500]">State</label>
-                    <input type="text" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={state} onChange={(e:any) => setState(e.target.value)}/>
+                    <input type="text" name="state" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange}/>
                   </div>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-start items-center">
                <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">Phone Number</label>
-                <input type="number" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={phoneNo} onChange={(e: any) => setPhoneNo(e.target.value)}/>
+                <input type="text" name="phoneno" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange}/>
               </div> 
               <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">Alternative Phone Number</label>
-                <input type="number" required  className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={altPhoneNo} onChange={(e: any) => setAltPhoneNo(e.target.value)}/>
+                <input type="text" name="altphoneno" required  className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange}/>
               </div>
               </div>
               <div className="flex flex-col md:gap-1 gap-0 justify-start items-start">
                 <label className="font-[700] font-['Inter']">Message</label>
-                <textarea  required className="w-full md:h-80 h-48 rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" value={message} onChange={(e: any) => setMessage(e.target.value)} ></textarea>
+                <textarea  required name="message" className="w-full md:h-80 h-48 rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange} ></textarea>
               </div>
               <div className="pt-2 md:pt-4">
               <button className="bg-red-900 hover:bg-primary py-2 px-4 float-end  text-white w-fit rounded">Submit</button>
