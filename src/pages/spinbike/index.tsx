@@ -271,7 +271,7 @@ const Spinbike = () => {
                 <textarea  required name="message" className="w-full md:h-80 h-48 rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange} ></textarea>
               </div>
               <div className="pt-2 md:pt-4">
-              <button className="bg-red-900 hover:bg-primary py-2 px-4 float-end  text-white w-fit rounded">Submit</button>
+              <button className="bg-red-900 hover:bg-primary duration-[1s] transition-all ease-in-out py-2 px-4 float-end  text-white w-fit rounded">Submit</button>
               </div>
             </form>
           </div>
