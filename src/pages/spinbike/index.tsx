@@ -154,8 +154,16 @@ const Spinbike = () => {
             <p className="text-green-800 font-[600]">A quick 10-15 minute session daily delivers the same benefits as a 2-hour workout, without putting stress on your joints or heart.</p>
             <p>This bike, equipped with removable resistance bands, is easy to set up. Just unbox, attach the bands, and kick-start your fitness journey today!</p>
           </div>
-          <div>
-            <img src={defsolu} className="h-['80%']" alt="" />
+          <div className="relative">
+            <img src={defsolu} className=" w-full rounded-lg" alt="" />
+
+
+            <div className="absolute right-8 bottom-8">
+              <button className="bg-red-900 md:py-3 py-1 md:px-6 px-3 rounded-full border-primary border-2 hover:bg-primary text-white text-sm md:text-lg duration-[1s] transition-all ease-in-out" onClick={scrolToForm}>Order Now</button>
+            </div>
+              
+
+
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-8 py-16">
