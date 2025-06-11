@@ -1,6 +1,6 @@
 import {RouterProvider, Routes, Route, createBrowserRouter, Navigate, Link} from 'react-router-dom'
 import "slick-carousel/slick/slick.css"
-import { SpinBike } from './pages'
+import { ElbowSupport, SpinBike } from './pages'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify'
 import AOS from "aos";
@@ -37,6 +37,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Navigate replace to="/spin" />} />
             <Route path='/spin' element={<SpinBike />} />
+            <Route path='/spin-bike' element={<SpinBike />} />
+            <Route path='/elbowsupport-and-quencher' element={<ElbowSupport />} />
           </Routes>
           <ToastContainer />
         </div>

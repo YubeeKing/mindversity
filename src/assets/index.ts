@@ -8,4 +8,15 @@ export {default as defsolu} from "./A New Design - Made with PosterMyWall (10).j
 export {default as upqual} from "./8120h9JHZAS._AC_SL1500-1024x1024-1-768x768.jpg";
 export {default as makexe} from "./71AIlYei6TL._AC_SL1500-1024x979-1-768x734.jpg";
 export {default as weightlift} from "./weight.png";
+export {default as layeroneleft} from "./photo_2025-06-11_06-17-01.jpg"
+export {default as layeroneright} from "./photo_2025-06-11_06-17-02.jpg";
+export {default as layertwoleft} from "./photo_2025-06-11_06-16-59.jpg";
+export {default as layertworight} from ".//A New Design - Made with PosterMyWall (16).jpg";
+export {default as stanleyone} from "./photo_2025-06-10_17-08-21.jpg";
+export {default as stanleytwo} from "./169709787_MzAwLTQ5MC03NWRlODJiN2Ey.webp";
+export {default as stanleythree} from "./7.jpg";
+export {default as stanleyfour} from "./1.jpg";
+export {default as bonanzaimg} from "./A New Design - Made with PosterMyWall (18).jpg";
+export {default as freedeliver} from "./A New Design - Made with PosterMyWall (19).jpg"
+
 

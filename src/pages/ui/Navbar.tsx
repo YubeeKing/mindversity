@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const Navbar = ({navRef} : any) => {
@@ -10,6 +11,7 @@ const Navbar = ({navRef} : any) => {
             </div>
             <div>
               <p className="font-[600] text-[0px] md:text-2xl text-primary ">FREE NATIONWIDE DELIVERY</p>
+              <Link to="/elbowsupport-and-quencher" className="font-[Jost] font-[600]">Quencher</Link>
             </div>
             <div>
               <button className="bg-red-900 md:py-3 py-1 md:px-6 px-3 rounded-full border-black border-2 hover:bg-primary text-white text-sm md:text-lg" onClick={navRef}>Order Now</button>
