@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import { IoCheckmark } from "react-icons/io5";
 import { General } from "../components"
-import { bonanzaimg, freedeliver, layeroneleft, layeroneright, layertwoleft, layertworight, stanleyfour, stanleyone, stanleythree, stanleytwo } from "../../assets";
+import { bonanzaimg, freedeliver, homeherone, homelbowone, homelbowthree, layeroneleft, layeroneright, layertwoleft, layertworight } from "../../assets";
 
 
 const ElbowSupport = () => {
@@ -15,16 +15,25 @@ const ElbowSupport = () => {
     autoplaySpeed: 2000,
     arrows: false
     }
+
+    const stanleydet = [
+      "Keeps drinks hot or cold for hours",
+"Spill-resistant and leak-proof lid",
+"Durable stainless steel design",
+"Comfortable grip handle",
+"Eco-friendly alternative to plastic bottles"
+    ]
  
-    const elbowdetails = ["90% Recycled 18/8 stainless steel BPA-free",
-"Recycled stainless steel icon inside the tumbler indicates your Quencher is made from sustainable material",
-"Double-wall vacuum insulation",
-"Powder coat finish",
-"FlowState™ screw-on 3-position lid",
-"Reusable straw",
-"Comfort-grip handle",
-"Car cup holder compatible (base diameter: 3.1 inches)",
-"Dishwasher safe"]
+    const elbowdetails = [
+      "Builds strong core muscles",
+
+"Enhances balance and stability",
+
+"Supports full-body toning",
+
+"Compact and portable for workouts anywhere",
+
+"Helps improve posture and flexibility"]
 
   return (
    <div>
@@ -87,34 +96,57 @@ const ElbowSupport = () => {
            <div>
             <Slider {...settings}>
                     <div className="w-full h-[450px]">
-                      <img src={stanleyone} alt="" className="w-full rounded-lg object-cover h-full" />
+                      <img src={homeherone} alt="" className="w-full rounded-lg object-cover h-full" />
                     </div>
                     <div className="w-full h-[450px]">
-                      <img src={stanleytwo} alt="" className="w-full rounded-lg object-cover h-full" />
+                      <img src={homelbowone} alt="" className="w-full rounded-lg object-cover h-full" />
                     </div>
                     <div className="w-full h-[450px]">
-                      <img src={stanleyone} alt="" className="w-full rounded-lg object-cover h-full" />
+                      <img src={homelbowthree} alt="" className="w-full rounded-lg object-cover h-full" />
                     </div>
                     <div className="w-full h-[450px]">
-                      <img src={stanleyfour} alt="" className="w-full rounded-lg object-cover h-full" />
+                      <img src={layeroneleft} alt="" className="w-full rounded-lg object-cover h-full" />
                     </div>
                     <div className="w-full h-[450px]">
-                      <img src={stanleyone} alt="" className="w-full rounded-lg object-cover h-full" />
+                      <img src={homelbowone} alt="" className="w-full rounded-lg object-cover h-full" />
                     </div>
                     <div className="w-full h-[450px]">
-                      <img src={stanleythree} alt="" className="w-full rounded-lg object-cover h-full" />
+                      <img src={layeroneright} alt="" className="w-full rounded-lg object-cover h-full" />
                     </div>
                   </Slider>
            </div>
            <div>
-            <h2 className="font-[Jost] text-3xl font-[600]">STANLEY QUENCHER FLOWSTATE TUMBLER</h2>
-          <p className="py-4">Stay hydrated all day with this versatile travel tumbler, perfect for everything from intense workouts to long commutes. Its lid is designed with a rotating cover that offers three convenient options: a straw opening, a wide-mouth opening for sipping, and a full-cover top to prevent spills. The larger capacity fits easily into standard car cup holders and includes a sturdy handle for easy carrying.</p>
+            <div className="flex flex-col items-center justify-center text-center">
+            <h2 className="font-[Jost] text-2xl font-[600] uppercase">STANLEY QUENCHER FLOWSTATE TUMBLER</h2>
+                  <p className="font-[Jost] text-2xl font-[600] uppercase">&</p>
+            <h2 className="font-[Jost] text-2xl font-[600] uppercase"> 6 Elbow Abdominal Wheel</h2>
+                
+            </div>
+           
+          <p className="py-4">The Stanley Quencher FlowState Tumbler offers all-day hydration with a spill-proof lid, while the 6 Elbow Abdominal Wheel strengthens core muscles, enhancing balance, endurance, and overall body fitness.</p>
+           <p className="font-[600] font-[Jost] text-xl">Benefits:</p>
+          <div>
+            <h3 className="font-[600] font-[Jost] text-lg">Stanley Quencher FlowState Tumbler:</h3>
+                <ul className="ps-4">
+              {stanleydet.map((item: any, index: any) => (
+                <li key={index} className="flex items-center gap-1 font-[500]"> <span><IoCheckmark /></span> {item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="pt-2">
+            <h3 className="font-[600] font-[Jost] text-lg">6 Elbow Abdominal Wheel:</h3>
             <ul className="ps-4">
               {elbowdetails.map((item: any, index: any) => (
                 <li key={index} className="flex items-center gap-1 font-[500]"> <span><IoCheckmark /></span> {item}</li>
               ))}
-            </ul>
-          <p></p>
+            </ul> 
+          </div>
+           
+          <div className="flex gap-2 font-[Jost] py-2 text-2xl font-[700]">
+            <h2 className="font-[700] ">PRICE:</h2>
+            <del className="text-red-700">₦120,000</del>
+            <p className="text-green-700">₦90,000</p>
+          </div>
            </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-8 py-12">        

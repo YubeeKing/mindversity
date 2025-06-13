@@ -18,5 +18,8 @@ export {default as stanleythree} from "./7.jpg";
 export {default as stanleyfour} from "./1.jpg";
 export {default as bonanzaimg} from "./A New Design - Made with PosterMyWall (18).jpg";
 export {default as freedeliver} from "./A New Design - Made with PosterMyWall (24).jpg"
+export {default as homeherone} from "./homeherone.jpg";
+export {default as homelbowone} from "./homelbowone.jpg";
+export {default as homelbowthree} from "./homelbowthree.jpg";
 
 
