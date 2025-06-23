@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 // import { toast } from "react-toastify";
 
 const Spinbike = () => {
+  
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -237,41 +238,41 @@ const Spinbike = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 justify-start items-center md:pt-2 pt-0">
                <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">First Name</label>
-                <input type="text" name="firstname"  required className="rounded border-inpcolor outline-none  border-opacity-90 border-2 p-1"  onChange={handleChange} />
+                <input type="text" name="firstname"  required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={handleChange} />
               </div> 
               <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">Last Name</label>
-                <input type="text" name="lastname" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange} />
+                <input type="text" name="lastname" required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={handleChange} />
               </div>
               </div>
               <div className="flex flex-col md:gap-1 gap-0 md:pt-2 pt-0">
                 <label className="font-[500]">Email</label>
-                <input type="email" name="email" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange} />
+                <input type="email" name="email" required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  onChange={handleChange} />
               </div>
               <div>
               <div className="flex flex-col md:gap-1 gap-0 md:pt-2 pt-0">
                     <label className="font-[500]">Address</label>
-                    <input type="text" name="email" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange} />
+                    <input type="text" name="email" required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={handleChange} />
                   </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-start items-center md:pt-2 pt-0">
                   <div className="flex flex-col md:gap-1 gap-0">
                     <label className="font-[500]">City</label>
-                    <input type="text" name="city" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange} />
+                    <input type="text" name="city" required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={handleChange} />
                   </div>
                   <div className="flex flex-col md:gap-1 gap-0">
                     <label className="font-[500]">State</label>
-                    <input type="text" name="state" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1" onChange={handleChange}/>
+                    <input type="text" name="state" required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={handleChange}/>
                   </div>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-start items-center">
                <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">Phone Number</label>
-                <input type="text" name="phoneno" required className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange}/>
+                <input type="text" name="phoneno" required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  onChange={handleChange}/>
               </div> 
               <div className="flex flex-col md:gap-1 gap-0">
                 <label className="font-[500]">Alternative Phone Number</label>
-                <input type="text" name="altphoneno" required  className="rounded border-inpcolor outline-none border-opacity-90 border-2 p-1"  onChange={handleChange}/>
+                <input type="text" name="altphoneno" required  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  onChange={handleChange}/>
               </div>
               </div>
               <div className="flex flex-col md:gap-1 gap-0 justify-start items-start">
