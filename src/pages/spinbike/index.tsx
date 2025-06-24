@@ -173,8 +173,8 @@ const Spinbike = () => {
             <img src={makexe} alt="" />
           </div>
           <div>
-            <h3 className="text-2xl md:text-4xl text-primary font-['Inter'] font-[600] pb-2">EASY AND STRAIGHTFORWRD TO OPERATE</h3>
-            <p className="py-2 font-[600] leading-4">Everything is labelled so anyone can easily operate it on their own, you would also have the number of our customer care in case you need our help with anything and it comes with an instruction manual for further guidance.</p>
+            <h3 className="text-xl md:text-3xl text-primary font-['Inter'] font-[600] pb-2">EASY AND STRAIGHTFORWRD TO OPERATE</h3>
+            <p className="py-2 font-[500] leading-4">Everything is labelled so anyone can easily operate it on their own, you would also have the number of our customer care in case you need our help with anything and it comes with an instruction manual for further guidance.</p>
             <img src={upqual} alt="" />
           </div>
         </div>
